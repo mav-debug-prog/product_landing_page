@@ -1,0 +1,214 @@
+:root
+{
+    --white: hsl(0, 0%, 100%);
+    --text: hsl(228, 12%, 48%);
+    --pale: hsl(32, 37%, 92%);
+    --cream: hsla(43, 100%, 68%, 1);
+    --orange: hsla(21, 100%, 49%, 1);
+    --orangered: hsla(27, 100%, 68%, 1);
+    --green: hsla(106, 100%, 57%, 1);
+}
+
+*
+{
+    margin: 0;
+}
+
+body
+{
+    background-color: var(--pale);
+}
+
+#header-img
+{
+    width: 60px;
+    object-fit: contain;
+}
+
+#nav-bar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
+    padding: 10px;
+}
+
+.nav-links
+{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav-links a
+{
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+}
+
+.nav-links li > a:hover
+{
+    background-color: var(--green);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+}
+
+.product
+{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: "montserrat";
+}
+
+#email-section
+{
+    margin-top: 100px;
+}
+
+input
+{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--pale);
+}
+
+#submit
+{
+    background-color: var(--cream);
+    cursor: pointer;
+}
+
+section::before
+{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+section
+{
+    margin: 40px 20px;
+    text-align: center;
+}
+
+h2
+{
+    font-family: "fraunces";
+    margin-bottom: 10px;
+}
+
+.icon
+{
+    color: var(--orange);
+    margin-right: 30px;
+}
+
+#features
+{
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.feature
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.feature h2, .feature p
+{
+    font-family: "montserrat";
+}
+
+#pricing
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+
+.item
+{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(80%/3);
+    margin: 20px;
+    border-radius: 5px;
+    font-family: "montserrat";
+}
+
+ol > li
+{
+    list-style-type: none;
+    text-align: left;
+}
+
+.level
+{
+    background-color: #ddddddb2;
+    color: black;
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 700;
+}
+
+.item h2, .item p
+{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.add
+{
+    background-color: var(--cream);
+    border: 0;
+    margin: 40px 0 10px 0;
+    width: 40%;
+    font-family: "montserrat";
+    font-size: 1em;
+    min-width: 100px;
+}
+
+.add:hover
+{
+    background-color: var(--orangered);
+}
+
+@media (max-width: 700px)
+{
+    #pricing
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product
+    {
+        width: 300px;
+    }
+}
